@@ -31,7 +31,7 @@
         <div class="container home">
             <header>
                 <div class="logo">
-                    <a href="index.html" title="Home">
+                    <a href="<?=site_url()?>" title="Home">
                         <img class="hidden-xs" src="<?=get_stylesheet_directory_uri()?>/images/logo/logo-pc.png" alt="The Marker" width="72" height="82">
                         <img class="visible-xs" src="<?=get_stylesheet_directory_uri()?>/images/logo/logo-mobile.png" alt="The Marker" width="" height="">
                         <span class="hidden-xs">Home</span>
@@ -39,7 +39,7 @@
                 </div>
 
                 <div class="site-search">
-                    <form class="form-inline">
+                    <form action="<?=site_url()?>" class="form-inline">
                         <div class="form-group">
                             <div class="input-group">
                                 <input class="form-control site-search-input" type="search" name="s" placeholder="Search Keyword...">
