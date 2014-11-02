@@ -7,8 +7,8 @@
     <div id="home-hero" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
             <?php $banners = get_posts(array('tag'=>'home-banner'));?>
-            <?php foreach($banners as $banner){ ?>
-            <div class="item active">
+            <?php foreach($banners as $index => $banner){ ?>
+            <div class="item<?php if($index === 0){ ?> active<?php } ?>">
                 <?php the_post_thumbnail('home-banner'); ?>
                 <!--<div class="carousel-caption"></div>--> 
             </div>
