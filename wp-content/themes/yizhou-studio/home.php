@@ -6,29 +6,19 @@
 
     <div id="home-hero" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
+            <?php $banners = get_posts(array('tag'=>'home-banner'));?>
+            <?php foreach($banners as $banner){ ?>
             <div class="item active">
-              <img src="<?=get_stylesheet_directory_uri()?>/images/homehero/0.jpg" alt="">
-              <!-- <div class="carousel-caption"></div> -->
+                <?php the_post_thumbnail('home-banner'); ?>
+                <!--<div class="carousel-caption"></div>--> 
             </div>
-            <div class="item">
-                <img src="<?=get_stylesheet_directory_uri()?>/images/homehero/1.jpg" alt="">
-                <!-- <div class="carousel-caption"></div> -->
-            </div>
-            <div class="item">
-                <img src="<?=get_stylesheet_directory_uri()?>/images/homehero/0.jpg" alt="">
-                <!-- <div class="carousel-caption"></div> -->
-            </div>
-            <div class="item">
-                <img src="<?=get_stylesheet_directory_uri()?>/images/homehero/1.jpg" alt="">
-                <!-- <div class="carousel-caption"></div> -->
-            </div>
+            <?php } ?>
         </div>
 
          <ol class="carousel-indicators">
-            <li data-target="#home-hero" data-slide-to="0" class="active"></li>
-            <li data-target="#home-hero" data-slide-to="1"></li>
-            <li data-target="#home-hero" data-slide-to="2"></li>
-            <li data-target="#home-hero" data-slide-to="3"></li>
+            <?php foreach($banners as $index => $banner){ ?>
+             <li data-target="#home-hero" data-slide-to="<?=$index?>"<?php if($index === 0){ ?> class="active"<?php } ?>></li>
+            <?php } ?>
         </ol>
     </div>
 
@@ -42,7 +32,7 @@
 
 <div class="row block-list category">
     <div class="col-xs-4 category-item">
-        <a href="listing.html" title="Entertainment">
+        <a href="<?=site_url()?>/category/lifestyle/" title="Lifestyle">
             <div class="thumbnail">
                 <img src="<?=get_stylesheet_directory_uri()?>/images/category/lifestyle.jpg" alt="">
             </div>
@@ -53,7 +43,7 @@
     </div>
 
     <div class="col-xs-4 category-item">
-        <a href="listing.html" title="Entertainment">
+        <a href="<?=site_url()?>/category/art/" title="Art">
             <div class="thumbnail">
                 <img src="<?=get_stylesheet_directory_uri()?>/images/category/lifestyle.jpg" alt="">
             </div>
@@ -64,7 +54,7 @@
     </div>
 
     <div class="col-xs-4 category-item">
-        <a href="listing.html" title="Entertainment">
+        <a href="<?=site_url()?>/category/fashion/" title="Fashion">
             <div class="thumbnail">
                 <img src="<?=get_stylesheet_directory_uri()?>/images/category/lifestyle.jpg" alt="">
             </div>
@@ -75,7 +65,7 @@
     </div>
 
     <div class="col-xs-4 category-item">
-        <a href="listing.html" title="Entertainment">
+        <a href="<?=site_url()?>/category/entertainment/" title="Entertainment">
             <div class="thumbnail">
                 <img src="<?=get_stylesheet_directory_uri()?>/images/category/lifestyle.jpg" alt="">
             </div>
@@ -86,7 +76,7 @@
     </div>
 
     <div class="col-xs-4 category-item">
-        <a href="listing.html" title="Designer">
+        <a href="<?=site_url()?>/category/designer/" title="Designer">
             <div class="thumbnail">
                 <img src="<?=get_stylesheet_directory_uri()?>/images/category/lifestyle.jpg" alt="">
             </div>

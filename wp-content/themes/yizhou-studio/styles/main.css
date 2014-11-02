@@ -377,7 +377,7 @@ footer {
 .primary-nav a {
     color: #ccc;
 }
-.primary-nav .active {
+.primary-nav .active a {
     color: #222;
 }
 
@@ -487,6 +487,7 @@ footer {
     text-indent: -999em;
     overflow: hidden;
     background: transparent url('../images/sprites/icons.png') no-repeat scroll -32px -32px;
+	position: relative;
 }
 .paging-prev {
     float: left;
@@ -494,6 +495,11 @@ footer {
 .paging-next {
     float: right;
     background-position: -64px -32px;
+}
+.paging-next a, .paging-prev a {
+	position: absolute;
+	width: 100%;
+	height: 100%;
 }
 
 /* Content */

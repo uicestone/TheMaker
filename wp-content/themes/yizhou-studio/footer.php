@@ -5,7 +5,7 @@
                 <nav class="footer-links">
                     <ul>
                         <li>
-                            <a href="contact.html" title="Contact Us">Contact Us</a>
+                            <a href="<?=site_url()?>/contact/" title="Contact Us">Contact Us</a>
                         </li>
                         <li>
                             <a href="http://www.yi-yo.net/">Yi Zhou</a>
@@ -39,5 +39,6 @@
         <!-- build:js({app,.tmp}) scripts/main.js -->
         <script src="<?=get_stylesheet_directory_uri()?>/scripts/main.js"></script>
         <!-- endbuild -->
+        <?php wp_footer(); ?>
 </body>
 </html>

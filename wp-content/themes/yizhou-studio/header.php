@@ -1,9 +1,9 @@
 <!doctype html>
 <html class="no-js">
     <head>
-        <meta charset="utf-8">
-        <title><?php wp_title(); ?></title>
-        <meta name="description" content="">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta charset="<?php bloginfo( 'charset' ); ?>">
+        <title><?php bloginfo('site_name'); ?></title>
         <meta name="viewport" content="width=device-width">
         <link rel="shortcut icon" href="<?=get_stylesheet_directory_uri()?>/favicon.ico">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -21,6 +21,7 @@
         <script src="<?=get_stylesheet_directory_uri()?>/bower_components/respond/dest/respond.min.js"></script>
         <![endif]-->
         <!-- endbuild -->
+        <?php wp_head(); ?>
     </head>
     <!--[if IE 7 ]>    <body class="ie7"> <![endif]-->
     <!--[if IE 8 ]>    <body class="ie8"> <![endif]-->
@@ -38,10 +39,10 @@
                 </div>
 
                 <div class="site-search">
-                    <form action="#" class="form-inline">
+                    <form class="form-inline">
                         <div class="form-group">
                             <div class="input-group">
-                                <input class="form-control site-search-input" type="search" placeholder="Search Keyword...">
+                                <input class="form-control site-search-input" type="search" name="s" placeholder="Search Keyword...">
                                 <span class="input-group-btn">
                                     <input class="btn site-search-btn" type="submit" class="btn" value="SEARCH">
                                 </span>
@@ -64,14 +65,8 @@
             <div id="body">
                 <!-- Start Main Content -->
                 <?php if(!is_home()){ ?>
-                 <nav class="primary-nav">
-                    <ul class="breadcrumb hidden-xs">
-                        <li class="active">Lifestyle</li>
-                        <li><a href="listing.html" title="Art">Art</a></li>
-                        <li><a href="listing.html" title="Fashion">Fashion</a></li>
-                        <li><a href="listing.html" title="Entertainment">Entertainment</a></li>
-                        <li><a href="listing.html" title="Designer">Designer</a></li>
-                    </ul>
+                <nav class="primary-nav">
+                    <?php wp_nav_menu(array('theme_location'=>'main-nav', 'container'=>false, 'menu_class'=>'breadcrumb hidden-xs')); ?>
 
                     <div class="navbar navbar-fixed-bottom visible-xs">
                         <div class="navbar-left">
@@ -83,13 +78,7 @@
                             <a class="nav-menu" href="#" data-toggle="dropdown">
                                 <span class="icon-menu"></span>
                             </a>
-                            <ul class="dropdown-menu pull-right" role="menu">
-                                <li><a href="listing.html" title="Lifestyle">LIFESTYLE</a></li>
-                                <li><a href="listing.html" title="Art">ART</a></li>
-                                <li><a href="listing.html" title="Entertainment">ENTERTAINMENT</a></li>
-                                <li><a href="listing.html" title="Fashion">FASHION</a></li>
-                                <li><a href="listing.html" title="Designer">DESIGNER</a></li>
-                            </ul>
+                            <?php wp_nav_menu(array('theme_location'=>'main-nav', 'container'=>false, 'menu_class'=>'dropdown-menu pull-right')); ?>
                         </div>
                     </div>
                 </nav>
