@@ -2,23 +2,23 @@
 <html class="no-js">
     <head>
         <meta charset="utf-8">
-        <title>carve</title>
+        <title><?php wp_title(); ?></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
-        <link rel="shortcut icon" href="/favicon.ico">
+        <link rel="shortcut icon" href="<?=get_stylesheet_directory_uri()?>/favicon.ico">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <!-- build:css styles/vendor.css -->
         <!-- bower:css -->
-        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="<?=get_stylesheet_directory_uri()?>/bower_components/bootstrap/dist/css/bootstrap.css" />
         <!-- endbower -->
         <!-- endbuild -->
         <!-- build:css(.tmp) styles/main.css -->
-        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="<?=get_stylesheet_directory_uri()?>/styles/main.css">
         <!-- endbuild -->
         <!-- build:js(.) scripts/oldieshim.js -->
         <!--[if lt IE 9]>
-        <script src="bower_components/html5shiv/dist/html5shiv.min.js"></script>
-        <script src="bower_components/respond/dest/respond.min.js"></script>
+        <script src="<?=get_stylesheet_directory_uri()?>/bower_components/html5shiv/dist/html5shiv.min.js"></script>
+        <script src="<?=get_stylesheet_directory_uri()?>/bower_components/respond/dest/respond.min.js"></script>
         <![endif]-->
         <!-- endbuild -->
     </head>
@@ -27,13 +27,12 @@
     <!--[if IE 9 ]>    <body class="ie9"> <![endif]-->
     <!--[if (gt IE 9)|!(IE)]><!--> <body> <!--<![endif]-->
 
-
-        <div class="container">
+        <div class="container home">
             <header>
                 <div class="logo">
                     <a href="index.html" title="Home">
-                        <img class="hidden-xs" src="images/logo/logo-pc.png" alt="The Marker" width="72" height="82">
-                        <img class="visible-xs" src="images/logo/logo-mobile.png" alt="The Marker" width="" height="">
+                        <img class="hidden-xs" src="<?=get_stylesheet_directory_uri()?>/images/logo/logo-pc.png" alt="The Marker" width="72" height="82">
+                        <img class="visible-xs" src="<?=get_stylesheet_directory_uri()?>/images/logo/logo-mobile.png" alt="The Marker" width="" height="">
                         <span class="hidden-xs">Home</span>
                     </a>
                 </div>
@@ -64,7 +63,16 @@
 
             <div id="body">
                 <!-- Start Main Content -->
-                <nav class="primary-nav">
+                <?php if(!is_home()){ ?>
+                 <nav class="primary-nav">
+                    <ul class="breadcrumb hidden-xs">
+                        <li class="active">Lifestyle</li>
+                        <li><a href="listing.html" title="Art">Art</a></li>
+                        <li><a href="listing.html" title="Fashion">Fashion</a></li>
+                        <li><a href="listing.html" title="Entertainment">Entertainment</a></li>
+                        <li><a href="listing.html" title="Designer">Designer</a></li>
+                    </ul>
+
                     <div class="navbar navbar-fixed-bottom visible-xs">
                         <div class="navbar-left">
                             <a href="#" class="nav-back">
@@ -85,65 +93,5 @@
                         </div>
                     </div>
                 </nav>
-                <div class="contact">
-                    <div class="map">
-                        <img src="images/map.jpg" width="1467" height="537" alt="">
-                    </div>
-
-                    <div class="contact-info">
-                        <dl>
-                            <dt>YI ZHOU STUDIO</dt>
-                            <dd><a href="www.yi-yo.net" title="website">www.yi-yo.net</a></dd>
-                            <dd><a href="mailto:studio@yi-yo.net" title="email">studio@yi-yo.net</a></dd>
-                            <dd>The Mansion, Block 1, 457 Shanxi Rd (N), Shanghai</dd>
-                        </dl>
-                        <dl>
-                            <dt>AD CONTACT</dt>
-                            <dd><a href="mailto:Studio@yi-yo.net" title="ad contact">Studio@yi-yo.net</a></dd>
-                        </dl>
-                    </div>
-                </div>
-                <!-- End Main Content -->
-            </div>
-
-            <footer>
-                <nav class="footer-links">
-                    <ul>
-                        <li>
-                            <a href="contact.html" title="Contact Us">Contact Us</a>
-                        </li>
-                        <li>
-                            <a href="http://www.yi-yo.net/">Yi Zhou Studio</a>
-                        </li>
-                    </ul>
-                </nav>
-            </footer>
-        </div>
-
-
-       <!-- build:js scripts/vendor.js -->
-        <!-- bower:js -->
-        <script src="bower_components/jquery/dist/jquery.js"></script>
-        <script src="bower_components/respond/dest/respond.min.js"></script>
-        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-        <!-- endbower -->
-        <!-- endbuild -->
-
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <!--
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X');ga('send','pageview');
-        </script>
-        -->
-        <!-- endbuild -->
-
-        <!-- build:js({app,.tmp}) scripts/main.js -->
-        <script src="scripts/main.js"></script>
-        <!-- endbuild -->
-</body>
-</html>
+                <?php } ?>
+                
