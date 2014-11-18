@@ -38,6 +38,7 @@
 
         <!-- build:js({app,.tmp}) scripts/main.js -->
         <script src="<?=get_stylesheet_directory_uri()?>/scripts/main.js"></script>
+        <script src="<?=get_stylesheet_directory_uri()?>/scripts/artTemplate.js"></script>
         <!-- endbuild -->
         <?php wp_footer(); ?>
 </body>

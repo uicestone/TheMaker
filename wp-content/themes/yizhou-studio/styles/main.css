@@ -31,6 +31,15 @@ h5 {
 h6 {
     font-size: 1.1em;
 }
+@media only screen and (max-width: 767px) {
+    h1 {font-size: 1.8em;}
+    h2 {font-size: 1.6em;}
+    h3 {font-size: 1.4em;}
+    h4 {font-size: 1.2em;}
+    h5 {font-size: 1.1em;}
+    h6 {font-size: 1em;}
+}
+
 
 p {
     color: #333;
@@ -146,6 +155,7 @@ footer {
     color: #222;
 }
 
+
 /* Site Search */
 .site-search {
     float: right;
@@ -192,7 +202,7 @@ footer {
         padding: 0;
         text-indent: -999em;
         overflow: hidden;
-        background: #fff url('../images/sprites/icons.png') no-repeat scroll 6px -31px;
+        background: #fff url('../images/sprites/icons.png') no-repeat scroll 8px -30px;
 
     }
     .site-search .input-group-btn {
@@ -316,8 +326,8 @@ footer {
         float: none;
         display: inline-block;
         width: 142px;
-        height: 142px;
         padding: 0;
+        vertical-align: top;
     }
     .block-list .category-item {
         clear: none !important;
@@ -332,10 +342,14 @@ footer {
         position: absolute;
         z-index: 2;
         top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
+        left: 20px;
+        right: 20px;
+        bottom: 14px;
         color: #fff;
+        margin: 0;
+        font-size: 1.2em;
+        white-space: nowrap;
+        word-break: break-word;
     }
     .category-item .caption:after {
         content: "";
@@ -343,11 +357,15 @@ footer {
         height: 100%;
         vertical-align: middle;
     }
-    .category-item .caption {
-        font-size: 1.2em;
-    }
     .category-item .caption-text {
+        display: inline-block;
         vertical-align: middle;
+        white-space: normal;
+    }
+}
+@media only screen and (max-width: 991px) {
+    .category-item .caption {
+        font-size: 1em;
     }
 }
 
@@ -377,7 +395,7 @@ footer {
 .primary-nav a {
     color: #ccc;
 }
-.primary-nav .active a {
+.primary-nav .active, .primary-nav .active a {
     color: #222;
 }
 
@@ -440,6 +458,20 @@ footer {
     background: transparent url('../images/bg-c8c8c8-40.png') repeat scroll 0 0;
     background: rgba(200,200,200, 0.4);
 }
+@media only screen and (max-width: 767px) {
+    .thumbnail-list h2.caption {
+        font-size: 1.1em;
+    }
+    .thumbnail-list h3.caption {
+        font-size: 1em;
+    }
+    .thumbnail-list .thumbnail {
+        margin-bottom: 0.5em;
+    }
+    .thumbnail-list .thumbnail+.caption {
+        margin-top: 0;
+    }
+}
 
 /* Block List */
 @media only screen and (max-width: 767px) {
@@ -487,7 +519,6 @@ footer {
     text-indent: -999em;
     overflow: hidden;
     background: transparent url('../images/sprites/icons.png') no-repeat scroll -32px -32px;
-	position: relative;
 }
 .paging-prev {
     float: left;
@@ -496,10 +527,20 @@ footer {
     float: right;
     background-position: -64px -32px;
 }
-.paging-next a, .paging-prev a {
-	position: absolute;
-	width: 100%;
-	height: 100%;
+
+.paging-block.loading {
+    position: relative;
+}
+.paging-block.loading:after {
+    display: block;
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: transparent url('../images/loader.gif') no-repeat scroll center center;
+    background-color: rgba(255,255,255,0.4);
 }
 
 /* Content */
