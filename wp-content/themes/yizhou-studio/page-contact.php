@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <div class="contact">
     <div class="map">
-        <img src="<?=get_stylesheet_directory_uri()?>/images/map.jpg" width="1467" height="537" alt="">
+        <a href="http://map.qq.com/?l=239177746" target="_blank"><img src="<?=get_stylesheet_directory_uri()?>/images/map.jpg" width="1467" height="537" alt=""></a>
     </div>
 
     <div class="contact-info">
