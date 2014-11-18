@@ -7,7 +7,7 @@
     <div class="contact-info">
         <dl>
             <dt>YI ZHOU STUDIO</dt>
-            <dd><a href="www.yi-yo.net" title="website">www.yi-yo.net</a></dd>
+            <dd><a href="http://www.yi-yo.net" title="website">www.yi-yo.net</a></dd>
             <dd><a href="mailto:studio@yi-yo.net" title="email">studio@yi-yo.net</a></dd>
             <dd>The Mansion, Block 1, 457 Shanxi Rd (N), Shanghai</dd>
         </dl>
