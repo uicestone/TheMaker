@@ -298,13 +298,17 @@ footer {
 .category {
     margin-top: 2em;
 }
+.category img {
+    max-width: 100%;
+    height: auto !important;
+}
 .category .thumbnail{
     margin-bottom: 1em;
 }
 .category .caption, .category a {
     color: #999;
 }
-.category .thumbnail img {
+.category a .thumbnail img {
     opacity: 0.8;
     FILTER: Alpha(opacity=80);
     transition: opacity 500ms;
@@ -375,6 +379,7 @@ footer {
         font-size: 1em;
     }
 }
+
 
 /* Footer Links */
 .footer-links a {
@@ -672,10 +677,6 @@ article img.float-right {
 .contact-info a {
     color: #999;
 }
-@media only screen and (min-width: 768px) {
-    .contact-info {
-    }
-}
 /*.contact-info dt {
     color: #999;
     font-weight: normal;
@@ -736,5 +737,53 @@ article img.float-right {
 @media only screen and (min-width: 768px) {
     .map {
         margin-top: 2em;
+    }
+}
+
+/* Contributors */
+.contributors>h1 {
+    color: #666;
+    font-size: 1.6em;
+    margin: 0 0 2.5em;
+}
+.contributors>h6 {
+    color: #666;
+    font-size: 0.87em;
+    margin-bottom: 1em;
+}
+.contributors .category-item {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.contributors .team h5 {
+    padding: 1em 0 0;
+    margin: 0 0 1em;
+    border-top: 1px solid #ccc;
+    font-size: 1em;
+    color: #999;
+}
+
+.contributors .founder img {
+    width: 100%;
+    height: auto !important;
+}
+
+.contributor-name {
+    font-size: 0.87em;
+    color: #999;
+}
+@media only screen and (min-width: 768px) {
+    .contributors .team h5 {
+        padding-bottom: 1.6em;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .contributors .international .category-item {
+        width: 24%;
+        margin-bottom: 0;
+    }
+    .contributors .china .category-item {
+        width: 12.5%;
     }
 }
