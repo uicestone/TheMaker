@@ -42,14 +42,26 @@ h6 {
 
 
 p {
-    color: #333;
+    color: #999;
+    line-height: 1.2em;
+}
+p small {
+    line-height: 1em;
 }
 
+ol, ul {
+    color: #999;
+    line-height: 1.2em;
+}
+li {
+    margin-bottom: 1em;
+}
 
 hr {
     clear: both;
     border-top-color: #666;
 }
+
 
 /* Global Structure */
 header, footer, #body {
@@ -86,6 +98,16 @@ footer {
     .container {
         width: 1500px;
     }
+}
+
+/* Align Bottom */
+.align-bottom {
+    height: 100%;
+    position: relative;
+}
+.align-bottom-inner {
+    position: absolute;
+    bottom: 0;
 }
 
 /* Thumbnail */
@@ -247,6 +269,7 @@ footer {
 }
 .social-share li {
     float: left;
+    margin: 0;
 }
 .social-share li + li {
     margin-left: 10px;
@@ -270,8 +293,14 @@ footer {
 }
 
 /* Advertisement */
+.advertisement a {
+    display: block;
+}
+.advertisement a+a {
+    margin-top: 10px;
+}
 .advertisement img{
-    width: 100%;
+    max-width: 100%;
     height: auto;
 }
 
@@ -612,9 +641,23 @@ article img.float-right {
     margin-right: 0;
 }
 
+.article-wrapper img {
+    max-width: 100%;
+    height: auto;
+}
+@media only screen and (max-width: 991px) {
+    .article-wrapper .align-bottom-inner {
+        position: static;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .article-wrapper .align-bottom {
+        height: 480px;
+    }
+}
 @media only screen and (min-width: 1200px ) {
     .article-wrapper {
-        min-height: 468px;
+        min-height: 640px;
         padding-right: 150px;
         position: relative;
         z-index: 1;
@@ -625,16 +668,22 @@ article img.float-right {
         top: 0;
         right: 0;
     }
+    .article-wrapper .align-bottom {
+        height: 640px;
+    }
 }
 
 /* Page Heading */
+.page-heading {
+    margin-bottom: 0.7em;
+}
 .page-heading small {
     color: #222;
 }
 @media only screen and (min-width: 1200px) {
-    .page-heading {
-        padding-bottom: 0.2em;
-        border-bottom: 1px solid #222;
+    .page-heading + .summary {
+        padding-top: 0.5em;
+        border-top: 1px solid #222;
     }
     .page-heading span, .page-heading small {
         float: none;
@@ -644,6 +693,14 @@ article img.float-right {
 }
 
 /* Media */
+.media {
+    margin-bottom: 1em;
+    border: 1px solid #000;
+}
+.media img {
+    width: 100%;
+    height: auto;
+}
 .media-info {
     margin: 0 0 1em;
 }
@@ -654,12 +711,8 @@ article img.float-right {
     text-align: right;
 }
 @media only screen and (min-width: 1200px) {
-    .media {
-        border: 2px solid #ccc;
-    }
     .media-info {
         background: #eee;
-        margin-top: 1em;
         padding: 1em 10px;
     }
     .media-info, .media-description, .media-length {
