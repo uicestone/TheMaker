@@ -79,12 +79,12 @@ footer {
     }
     footer {
         margin-bottom: 0;
-        border-top: 1px solid #666;
+        /*border-top: 1px solid #666;*/
     }
 }
 @media (min-width: 1500px) {
     .container {
-        width: 1466px;
+        width: 1500px;
     }
 }
 
@@ -406,6 +406,7 @@ footer {
 .primary-nav .breadcrumb {
     padding-left: 0;
     padding-right: 0;
+    text-align: center;
     background: none;
 }
 .primary-nav a {
@@ -455,14 +456,26 @@ footer {
 .thumbnail-list .thumbnail{
     position: relative;
     z-index: 1;
+    margin-bottom: 0.5em;
 }
 .thumbnail-list .caption {
     color: #222;
+    text-align: center;
+}
+.thumbnail-list .caption h2.caption {
+    font-size: 1.1em;
+}
+.thumbnail-list .caption h3.caption {
+    font-size: 1em;
 }
 .thumbnail-list .caption small, .thumbnail-list .caption span {
     display: block;
-    text-align: center;
     color: #222;
+}
+.thumbnail-list .caption small:after, .thumbnail-list .caption span:after {
+    content: "";
+    display: block;
+    height: 0;
 }
 .thumbnail-list .thumbnail .caption {
     margin: 0;
@@ -474,20 +487,33 @@ footer {
     background: transparent url('../images/bg-c8c8c8-40.png') repeat scroll 0 0;
     background: rgba(200,200,200, 0.4);
 }
-@media only screen and (max-width: 767px) {
+.thumbnail-list .thumbnail+.caption {
+    margin-top: 0;
+}
+@media only screen and (min-width: 768px) {
     .thumbnail-list h2.caption {
-        font-size: 1.1em;
+        font-size: 1.8em;
+        padding: 0.5em 0 1em;
     }
-    .thumbnail-list h3.caption {
-        font-size: 1em;
+    .thumbnail-list .caption small {
+        font-size: 0.6em;
+    }
+    .thumbnail-list .caption>*+* {
+        margin-top: 0.3em;
     }
     .thumbnail-list .thumbnail {
-        margin-bottom: 0.5em;
+        margin-bottom: 20px;
     }
-    .thumbnail-list .thumbnail+.caption {
-        margin-top: 0;
+    .thumbnail-list-item {
+        padding: 0 30px;
     }
 }
+@media only screen and (min-width: 992px) {
+    .thumbnail-list h2.caption {
+        font-size: 2.3em;
+    }
+}
+
 
 /* Block List */
 @media only screen and (max-width: 767px) {
