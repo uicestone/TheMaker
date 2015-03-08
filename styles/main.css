@@ -663,7 +663,20 @@ article img.float-right {
 }
 
 /* Contact Info */
-.contact-info dt {
+.contact-info {
+    text-align: center;
+    color: #999;
+    margin-bottom: -3em;
+    padding: 0 50px;
+}
+.contact-info a {
+    color: #999;
+}
+@media only screen and (min-width: 768px) {
+    .contact-info {
+    }
+}
+/*.contact-info dt {
     color: #999;
     font-weight: normal;
 }
@@ -703,7 +716,7 @@ article img.float-right {
     .contact .contact-info dt, .contact .contact-info dd, .contact .contact-info a {
         color: #fff;
     }
-}
+}*/
 
 /* Map */
 .map {
@@ -711,10 +724,14 @@ article img.float-right {
     text-align: center;
     margin: 1em 0 1em;
 }
-.map img {
+.map-inner {
+    float: left;
     position: relative;
-    left: 100%;
-    margin-left: -200%;
+    left: 50%;
+}
+.map-inner img {
+    position: relative;
+    left: -50%;
 }
 @media only screen and (min-width: 768px) {
     .map {
