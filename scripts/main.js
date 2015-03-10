@@ -109,7 +109,7 @@
 
 	$(function() {
 		initToggle('.site-search-toggle', '.site-search');
-		resizeRatio('.media', 16/9);
+		// resizeRatio('.media', 16/9);
 		initPaging('.paging-wrapper .paging', 'listing-item-template', '.paging-wrapper .paging-block');
 	});
 })(jQuery);
