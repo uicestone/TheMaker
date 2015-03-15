@@ -32,8 +32,8 @@
             <header>
                 <div class="logo">
                     <a href="<?=site_url()?>" title="Home">
-                        <img class="hidden-xs" src="<?=get_stylesheet_directory_uri()?>/images/logo/logo-pc.png" alt="The Marker" width="72" height="82">
-                        <img class="visible-xs" src="<?=get_stylesheet_directory_uri()?>/images/logo/logo-mobile.png" alt="The Marker" width="" height="">
+                        <img class="hidden-xs" src="<?=get_stylesheet_directory_uri()?>/images/logo/logo-pc.png" alt="The Marker" width="275" height="162">
+                        <img class="visible-xs" src="<?=get_stylesheet_directory_uri()?>/images/logo/logo-mobile.png" alt="The Marker" width="120" height="119">
                         <span class="hidden-xs">Home</span>
                     </a>
                 </div>
@@ -54,10 +54,13 @@
 
                 <div class="social-share">
                     <ul>
-                        <li><a href="" class="icon-weibo"></a></li>
-                        <li><a href="" class="icon-tencentwb"></a></li>
-                        <li><a href="" class="icon-tudou"></a></li>
-                        <li><a href="" class="icon-youtube"></a></li>
+                        <li><a href="#"><img src="<?=get_stylesheet_directory_uri()?>/images/social-icons/weibo.png" width="32" height="32" alt=""></a></li>
+                        <li><a href="#"><img src="<?=get_stylesheet_directory_uri()?>/images/social-icons/wechat.png" width="32" height="32" alt=""></a></li>
+                        <li><a href="#"><img src="<?=get_stylesheet_directory_uri()?>/images/social-icons/twitter.png" width="32" height="32" alt=""></a></li>
+                        <li><a href="#"><img src="<?=get_stylesheet_directory_uri()?>/images/social-icons/instgram.png" width="32" height="32" alt=""></a></li>
+                        <li><a href="#"><img src="<?=get_stylesheet_directory_uri()?>/images/social-icons/facebook.png" width="32" height="32" alt=""></a></li>
+                        <li><a href="#"><img src="<?=get_stylesheet_directory_uri()?>/images/social-icons/tudou.png" width="32" height="32" alt=""></a></li>
+                        <li><a href="#"><img src="<?=get_stylesheet_directory_uri()?>/images/social-icons/youtube.png" width="32" height="32" alt=""></a></li>
                     </ul>
                 </div>
             </header>

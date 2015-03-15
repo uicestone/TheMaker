@@ -51,40 +51,36 @@
 				type: 'GET',
 				dataType: 'JSON',
 				success: function(result) {
-					if( !result || result.length<1 ) {
-						// error handler
-						return;
-					} else {
-						var loadedHtml = '<div style="position:absolute; width:100%; top:0; left:' + (isPrev? '-' : '+') + '100%;">';
-						var $oldItems = $wrapper.children(),
-							$newItems;
-						for( var i=0; i<result.length; i++ ) {
-							loadedHtml += template( templateId, result[i] );
-						}
-						loadedHtml += '</div>';
-
-						$wrapper.find(':animated').stop(true, true);
-
-						$newItems = $(loadedHtml).appendTo( $wrapper );
-						$wrapper.removeClass('loading');
-						$oldItems.animate({
-							position: 'relative',
-							left: isPrev? '100%' : '-100%'
-						});
-						$newItems.animate({
-							left: 0
-						}, function() {
-							$(this).css({
-								position: 'relative'
-							});
-							$oldItems.remove();
-						});
+					if( !result || result.length<1 ) { return; }
+					var loadedHtml = '<div style="position:absolute; width:100%; top:0; left:' + (isPrev? '-' : '+') + '100%;">';
+					var $oldItems = $wrapper.children(),
+						$newItems;
+					for( var i=0; i<result.length; i++ ) {
+						loadedHtml += template( templateId, result[i] );
 					}
-				},
-				complete: function() {
+					loadedHtml += '</div>';
+
+					$wrapper.find(':animated').stop(true, true);
+
+					$newItems = $(loadedHtml).appendTo( $wrapper );
+					$wrapper.removeClass('loading');
+					$oldItems.animate({
+						position: 'relative',
+						left: isPrev? '100%' : '-100%'
+					});
+					$newItems.animate({
+						left: 0
+					}, function() {
+						$(this).css({
+							position: 'relative'
+						});
+						$oldItems.remove();
+					});
 					$prev.toggle( targetPage > 1 );
 					$next.toggle( targetPage < totalPages );
 					$wrapper.data('page', targetPage);
+				},
+				complete: function() {
 					$wrapper.removeClass('loading');
 				}
 			});
@@ -113,7 +109,7 @@
 
 	$(function() {
 		initToggle('.site-search-toggle', '.site-search');
-		resizeRatio('.media', 16/9);
+		// resizeRatio('.media', 16/9);
 		initPaging('.paging-wrapper .paging', 'listing-item-template', '.paging-wrapper .paging-block');
 	});
 })(jQuery);

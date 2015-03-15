@@ -8,7 +8,7 @@
                             <a href="<?=site_url()?>/contact/" title="Contact Us">Contact Us</a>
                         </li>
                         <li>
-                            <a href="http://www.yi-yo.net/">Yi Zhou</a>
+                            <a href="<?=site_url()?>/contributors/" title="Contributors">Contributors</a>
                         </li>
                     </ul>
                 </nav>

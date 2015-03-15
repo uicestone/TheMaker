@@ -42,14 +42,26 @@ h6 {
 
 
 p {
-    color: #333;
+    color: #999;
+    line-height: 1.2em;
+}
+p small {
+    line-height: 1em;
 }
 
+ol, ul {
+    color: #999;
+    line-height: 1.2em;
+}
+li {
+    margin-bottom: 1em;
+}
 
 hr {
     clear: both;
     border-top-color: #666;
 }
+
 
 /* Global Structure */
 header, footer, #body {
@@ -79,13 +91,24 @@ footer {
     }
     footer {
         margin-bottom: 0;
-        border-top: 1px solid #666;
+        /*border-top: 1px solid #666;*/
     }
 }
 @media (min-width: 1500px) {
     .container {
-        width: 1466px;
+        width: 1500px;
     }
+}
+
+/* Align Bottom */
+.align-bottom {
+    height: 100%;
+    position: relative;
+}
+.align-bottom-inner {
+    position: absolute;
+    bottom: 0;
+    max-width: 100%;
 }
 
 /* Thumbnail */
@@ -149,10 +172,17 @@ footer {
 /* Logo */
 .logo {
     text-align: center;
+    font-size: 1.14em;
 }
 .logo a {
     display: inline-block;
     color: #222;
+    position: relative;
+}
+.logo span {
+    width: 100%;
+    position: absolute;
+    bottom: -40px;
 }
 
 
@@ -240,6 +270,7 @@ footer {
 }
 .social-share li {
     float: left;
+    margin: 0;
 }
 .social-share li + li {
     margin-left: 10px;
@@ -263,8 +294,14 @@ footer {
 }
 
 /* Advertisement */
+.advertisement a {
+    display: block;
+}
+.advertisement a+a {
+    margin-top: 10px;
+}
 .advertisement img{
-    width: 100%;
+    max-width: 100%;
     height: auto;
 }
 
@@ -291,13 +328,17 @@ footer {
 .category {
     margin-top: 2em;
 }
+.category img {
+    max-width: 100%;
+    height: auto !important;
+}
 .category .thumbnail{
     margin-bottom: 1em;
 }
 .category .caption, .category a {
     color: #999;
 }
-.category .thumbnail img {
+.category a .thumbnail img {
     opacity: 0.8;
     FILTER: Alpha(opacity=80);
     transition: opacity 500ms;
@@ -311,7 +352,7 @@ footer {
     font-size: 1em;
     margin-top: 1em;
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1200px) {
     .category {
         margin: 0;
         text-align: justify;
@@ -322,12 +363,14 @@ footer {
         width: 100%;
         height: 0;
     }
-    .category-item {
+    .category-item, .home .category-item {
         float: none;
         display: inline-block;
-        width: 142px;
         padding: 0;
         vertical-align: top;
+    }
+    .home .category-item {
+        width: 142px;
     }
     .block-list .category-item {
         clear: none !important;
@@ -369,6 +412,7 @@ footer {
     }
 }
 
+
 /* Footer Links */
 .footer-links a {
     color: #ccc;
@@ -385,17 +429,27 @@ footer {
 .footer-links li + li:before {
     content: " / ";
 }
+@media only screen and (min-width: 768px) {
+    .footer-links {
+        position: absolute;
+        top: 210px;
+    }
+    .footer-links a {
+        color: #000;
+    }
+}
 
 /* Primary Nav */
 .primary-nav .breadcrumb {
     padding-left: 0;
     padding-right: 0;
+    text-align: center;
     background: none;
 }
 .primary-nav a {
     color: #ccc;
 }
-.primary-nav .active, .primary-nav .active a {
+.primary-nav .active {
     color: #222;
 }
 
@@ -439,14 +493,26 @@ footer {
 .thumbnail-list .thumbnail{
     position: relative;
     z-index: 1;
+    margin-bottom: 0.5em;
 }
 .thumbnail-list .caption {
     color: #222;
+    text-align: center;
+}
+.thumbnail-list .caption h2.caption {
+    font-size: 1.1em;
+}
+.thumbnail-list .caption h3.caption {
+    font-size: 1em;
 }
 .thumbnail-list .caption small, .thumbnail-list .caption span {
     display: block;
-    text-align: center;
     color: #222;
+}
+.thumbnail-list .caption small:after, .thumbnail-list .caption span:after {
+    content: "";
+    display: block;
+    height: 0;
 }
 .thumbnail-list .thumbnail .caption {
     margin: 0;
@@ -458,20 +524,33 @@ footer {
     background: transparent url('../images/bg-c8c8c8-40.png') repeat scroll 0 0;
     background: rgba(200,200,200, 0.4);
 }
-@media only screen and (max-width: 767px) {
+.thumbnail-list .thumbnail+.caption {
+    margin-top: 0;
+}
+@media only screen and (min-width: 768px) {
     .thumbnail-list h2.caption {
-        font-size: 1.1em;
+        font-size: 1.8em;
+        padding: 0.5em 0 1em;
     }
-    .thumbnail-list h3.caption {
-        font-size: 1em;
+    .thumbnail-list .caption small {
+        font-size: 0.6em;
+    }
+    .thumbnail-list .caption>*+* {
+        margin-top: 0.3em;
     }
     .thumbnail-list .thumbnail {
-        margin-bottom: 0.5em;
+        margin-bottom: 20px;
     }
-    .thumbnail-list .thumbnail+.caption {
-        margin-top: 0;
+    .thumbnail-list-item {
+        padding: 0 30px;
     }
 }
+@media only screen and (min-width: 992px) {
+    .thumbnail-list h2.caption {
+        font-size: 2.3em;
+    }
+}
+
 
 /* Block List */
 @media only screen and (max-width: 767px) {
@@ -565,9 +644,23 @@ article img.float-right {
     margin-right: 0;
 }
 
+.article-wrapper img {
+    max-width: 100%;
+    height: auto;
+}
+@media only screen and (max-width: 991px) {
+    .article-wrapper .align-bottom-inner {
+        position: static;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .article-wrapper .align-bottom {
+        height: 480px;
+    }
+}
 @media only screen and (min-width: 1200px ) {
     .article-wrapper {
-        min-height: 468px;
+        min-height: 640px;
         padding-right: 150px;
         position: relative;
         z-index: 1;
@@ -578,16 +671,22 @@ article img.float-right {
         top: 0;
         right: 0;
     }
+    .article-wrapper .align-bottom {
+        height: 640px;
+    }
 }
 
 /* Page Heading */
+.page-heading {
+    margin-bottom: 0.7em;
+}
 .page-heading small {
     color: #222;
 }
 @media only screen and (min-width: 1200px) {
-    .page-heading {
-        padding-bottom: 0.2em;
-        border-bottom: 1px solid #222;
+    .page-heading + .summary {
+        padding-top: 0.5em;
+        border-top: 1px solid #222;
     }
     .page-heading span, .page-heading small {
         float: none;
@@ -597,6 +696,18 @@ article img.float-right {
 }
 
 /* Media */
+.media {
+    margin-bottom: 1em;
+    border: 1px solid #000;
+}
+.media embed, .meida object, .media video {
+    width: 100%;
+    display: block;
+}
+.media img {
+    width: 100%;
+    height: auto;
+}
 .media-info {
     margin: 0 0 1em;
 }
@@ -607,12 +718,8 @@ article img.float-right {
     text-align: right;
 }
 @media only screen and (min-width: 1200px) {
-    .media {
-        border: 2px solid #ccc;
-    }
     .media-info {
         background: #eee;
-        margin-top: 1em;
         padding: 1em 10px;
     }
     .media-info, .media-description, .media-length {
@@ -621,47 +728,16 @@ article img.float-right {
 }
 
 /* Contact Info */
-.contact-info dt {
+.contact-info {
+    text-align: center;
     color: #999;
-    font-weight: normal;
+    margin-bottom: -3em;
+    padding: 0 50px;
 }
-.contact-info dd {
-    color: #666;
+.contact-info a {
+    color: #999;
 }
-@media only screen and (min-width: 768px) {
-    .contact-info {
-        text-align: right;
-        margin-top: 2em;
-    }
-    .contact-info dl {
-        display: inline-block;
-        vertical-align: bottom;
-        text-align: left;
-    }
-    .contact-info dl + dl {
-        margin-left: 20px;
-    }
-}
-@media only screen and (max-width: 767px) {
-    .contact {
-        position: relative;
-        z-index: 1;
-        min-height: 320px;
-    }
-    .contact .contact-info {
-        width: 100%;
-        padding: 1em 30px;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        z-index: 2;
-        background: transparent url('../images/bg-black-40.png') repeat scroll 0 0;
-        background: rgba(0, 0, 0, 0.4);
-    }
-    .contact .contact-info dt, .contact .contact-info dd, .contact .contact-info a {
-        color: #fff;
-    }
-}
+
 
 /* Map */
 .map {
@@ -669,13 +745,64 @@ article img.float-right {
     text-align: center;
     margin: 1em 0 1em;
 }
-.map img {
+.map-inner {
+    float: left;
     position: relative;
-    left: 100%;
-    margin-left: -200%;
+    left: 50%;
+}
+.map-inner img {
+    margin-left: -100%;
 }
 @media only screen and (min-width: 768px) {
     .map {
         margin-top: 2em;
+    }
+}
+
+/* Contributors */
+.contributors>h1 {
+    color: #666;
+    font-size: 1.6em;
+    margin: 0 0 2.5em;
+}
+.contributors>h6 {
+    color: #666;
+    font-size: 0.87em;
+    margin-bottom: 1em;
+}
+.contributors .category-item {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.contributors .team h5 {
+    padding: 1em 0 0;
+    margin: 0 0 1em;
+    border-top: 1px solid #ccc;
+    font-size: 1em;
+    color: #999;
+}
+
+.contributors .founder img {
+    width: 100%;
+    height: auto !important;
+}
+
+.contributor-name {
+    font-size: 0.87em;
+    color: #999;
+}
+@media only screen and (min-width: 768px) {
+    .contributors .team h5 {
+        padding-bottom: 1.6em;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .contributors .international .category-item {
+        width: 24%;
+        margin-bottom: 0;
+    }
+    .contributors .china .category-item {
+        width: 12.5%;
     }
 }

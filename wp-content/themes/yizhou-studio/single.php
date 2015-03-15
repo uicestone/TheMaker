@@ -1,7 +1,7 @@
 <?php get_header(); the_post(); ?>                
 <div class="article-wrapper">
    <div class="row">
-       <div class="col-lg-6">
+       <div class="col-md-6">
            <h1 class="page-heading">
                <small><?=get_post_meta(get_the_ID(), 'subtitle', true)?></small>
                <span><?php the_title(); ?></span>
@@ -11,7 +11,7 @@
    </div>
 
    <div class="visible-lg advertisement">
-        <img src="<?=get_stylesheet_directory_uri()?>/images/advertisement/0.jpg" width="143" height="468" alt="adv">
+        <img src="<?=get_stylesheet_directory_uri()?>/images/advertisement/1.jpg" width="142" height="310" alt="adv">
    </div>
 </div>
 
