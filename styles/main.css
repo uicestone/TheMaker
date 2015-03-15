@@ -305,6 +305,13 @@ footer {
     height: auto;
 }
 
+.advertisement.pos-left {
+    float: left;
+}
+.advertisement.pos-right {
+    float: right;
+}
+
 /* Home Hero */
 @media only screen and (min-width: 1200px) {
     .home-hero {
@@ -449,7 +456,7 @@ footer {
 .primary-nav a {
     color: #ccc;
 }
-.primary-nav .active {
+.primary-nav .active a {
     color: #222;
 }
 
@@ -805,4 +812,11 @@ article img.float-right {
     .contributors .china .category-item {
         width: 12.5%;
     }
+}
+
+/* Tips */
+.tips img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
 }
