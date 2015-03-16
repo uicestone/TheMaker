@@ -14,6 +14,7 @@
         <!-- endbuild -->
         <!-- build:css(.tmp) styles/main.css -->
         <link rel="stylesheet" href="<?=get_stylesheet_directory_uri()?>/styles/main.css">
+        <link rel="stylesheet" href="<?=get_stylesheet_directory_uri()?>/style.css">
         <!-- endbuild -->
         <!-- build:js(.) scripts/oldieshim.js -->
         <!--[if lt IE 9]>
