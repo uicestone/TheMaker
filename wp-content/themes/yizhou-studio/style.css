@@ -1,3 +1,6 @@
 /*
 	Theme Name: YiZhou Studio
 */
+.primary-nav .active, .primary-nav .active a {
+    color: #222;
+}
