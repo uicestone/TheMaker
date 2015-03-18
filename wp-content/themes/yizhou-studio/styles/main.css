@@ -1,20 +1,25 @@
 /* Global Styles */
+body {
+    font-family:  Arial,  "Microsoft YaHei", "SimSun", sans-serif;
+    color: rgb(88,88,88);
+}
 body, .navbar-fixed-bottom {
     min-width: 320px;
 }
 
 a {
-    color: #666;
+    color: #000;
     transition: all 400ms;
 }
 a:hover {
-    color: #ccc;
+    /*color: #666;*/
     text-decoration: none;
 }
 
 
-h2, h3, h4, h5, h6 {
-    color: #333;
+h1, h2, h3, h4, h5, h6,
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+    color: #000;
 }
 h2 {
     font-size: 1.8em;
@@ -42,7 +47,6 @@ h6 {
 
 
 p {
-    color: #999;
     line-height: 1.2em;
 }
 p small {
@@ -50,7 +54,6 @@ p small {
 }
 
 ol, ul {
-    color: #999;
     line-height: 1.2em;
 }
 li {
@@ -91,7 +94,6 @@ footer {
     }
     footer {
         margin-bottom: 0;
-        /*border-top: 1px solid #666;*/
     }
 }
 @media (min-width: 1500px) {
@@ -172,11 +174,9 @@ footer {
 /* Logo */
 .logo {
     text-align: center;
-    font-size: 1.14em;
 }
 .logo a {
     display: inline-block;
-    color: #222;
     position: relative;
 }
 .logo span {
@@ -193,6 +193,7 @@ footer {
 .site-search-input {
     padding-left: 5px;
     padding-right: 5px;
+    color: rgb(137,137,137);
 }
 .site-search-toggle {
     width: 32px;
@@ -216,7 +217,7 @@ footer {
         z-index: 2;
         right: 0;
         bottom: 10px;
-        border: 1px solid #ccc;
+        border: 1px solid rgb(137,137,137);
         background: #fff;
     }
     .site-search-input {
@@ -275,21 +276,13 @@ footer {
 .social-share li + li {
     margin-left: 10px;
 }
-.social-share a {
-    opacity: 0.8;
-    FILTER: Alpha(opacity=80);
-}
-.social-share a:hover {
-    opacity: 1;
-    FILTER: Alpha(opacity=100);
-}
 
 @media only screen and (min-width: 768px) {
     .social-share {
         position: absolute;
         z-index: 2;
         right: 0;
-        bottom: -40px;
+        bottom: -30px;
     }
 }
 
@@ -303,6 +296,13 @@ footer {
 .advertisement img{
     max-width: 100%;
     height: auto;
+}
+
+.advertisement.pos-left {
+    float: left;
+}
+.advertisement.pos-right {
+    float: right;
 }
 
 /* Home Hero */
@@ -334,9 +334,6 @@ footer {
 }
 .category .thumbnail{
     margin-bottom: 1em;
-}
-.category .caption, .category a {
-    color: #999;
 }
 .category a .thumbnail img {
     opacity: 0.8;
@@ -422,6 +419,7 @@ footer {
     margin: 0;
     text-align: center;
     color: #ccc;
+    font-size: 0.86em;
 }
 .footer-links li {
     display: inline;
@@ -432,7 +430,7 @@ footer {
 @media only screen and (min-width: 768px) {
     .footer-links {
         position: absolute;
-        top: 210px;
+        top: 230px;
     }
     .footer-links a {
         color: #000;
@@ -447,10 +445,10 @@ footer {
     background: none;
 }
 .primary-nav a {
-    color: #ccc;
+    color: rgb(160,160,160);
 }
-.primary-nav .active {
-    color: #222;
+.primary-nav .active a {
+    color: #000;
 }
 
 .primary-nav .navbar {
@@ -680,9 +678,6 @@ article img.float-right {
 .page-heading {
     margin-bottom: 0.7em;
 }
-.page-heading small {
-    color: #222;
-}
 @media only screen and (min-width: 1200px) {
     .page-heading + .summary {
         padding-top: 0.5em;
@@ -730,12 +725,9 @@ article img.float-right {
 /* Contact Info */
 .contact-info {
     text-align: center;
-    color: #999;
     margin-bottom: -3em;
     padding: 0 50px;
-}
-.contact-info a {
-    color: #999;
+    color: #000;
 }
 
 
@@ -761,12 +753,10 @@ article img.float-right {
 
 /* Contributors */
 .contributors>h1 {
-    color: #666;
     font-size: 1.6em;
     margin: 0 0 2.5em;
 }
 .contributors>h6 {
-    color: #666;
     font-size: 0.87em;
     margin-bottom: 1em;
 }
@@ -778,9 +768,8 @@ article img.float-right {
 .contributors .team h5 {
     padding: 1em 0 0;
     margin: 0 0 1em;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid #000;
     font-size: 1em;
-    color: #999;
 }
 
 .contributors .founder img {
@@ -789,8 +778,7 @@ article img.float-right {
 }
 
 .contributor-name {
-    font-size: 0.87em;
-    color: #999;
+    font-size: 0.86em;
 }
 @media only screen and (min-width: 768px) {
     .contributors .team h5 {
@@ -805,4 +793,11 @@ article img.float-right {
     .contributors .china .category-item {
         width: 12.5%;
     }
+}
+
+/* Tips */
+.tips img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
 }
