@@ -3,7 +3,7 @@
     <div class="contact" data-paging-total="1">
         <div class="map">
             <div class="map-inner">
-                <img src="<?=get_stylesheet_directory_uri()?>/images/map.jpg" width="1467" height="537" alt="">
+                <img src="<?=get_stylesheet_directory_uri()?>/images/map.jpg" width="1789" height="851" alt="">
             </div>
         </div>
 
