@@ -47,7 +47,7 @@
 			$wrapper.addClass('loading');
 
 			$.ajax({
-				url: dataSource + '/page/' + targetPage,
+				url: dataSource + '/page/' + targetPage + '/',
 				type: 'GET',
 				dataType: 'JSON',
 				success: function(result) {
