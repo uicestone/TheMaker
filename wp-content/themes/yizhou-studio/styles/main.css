@@ -1,11 +1,13 @@
 /* Global Styles */
 body {
-    font-family:  Arial,  "Microsoft YaHei", "SimSun", sans-serif;
     color: rgb(88,88,88);
-    font-size: 10px;
+    font-size: 12px;
 }
 body, .navbar-fixed-bottom {
     min-width: 320px;
+}
+body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family:  "Times New Roman",  "Microsoft YaHei", "SimSun", sans-serif;
 }
 
 a {
@@ -66,6 +68,7 @@ header {
     padding: 0 0 0.5em;
     margin-bottom: 2.5em;
     border-bottom: 1px solid #666;
+	letter-spacing: 2px;
 }
 footer {
     padding: 1em 0;
@@ -79,7 +82,7 @@ footer {
 @media only screen and (min-width: 768px) {
     header {
         padding-top: 2em;
-        margin-bottom: 4em;
+        margin-bottom: 25px;
         position: relative;
         z-index: 1;
     }
@@ -165,7 +168,7 @@ footer {
 /* Logo */
 .logo {
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 7px;
     font-size: 1.4em;
 }
 .logo a {
@@ -226,7 +229,7 @@ footer {
         box-shadow: none;
         padding-top: 0;
         padding-bottom: 0;
-        height: 20px;
+        height: 23px;
     }
     .site-search-btn {
         width: 30px;
@@ -347,7 +350,7 @@ footer {
 }
 .category .caption {
     text-align: center;
-    font-size: 1.2em;
+    font-size: 12px;
     margin-top: 1em;
 }
 @media only screen and (min-width: 1200px) {
@@ -433,7 +436,11 @@ footer {
 }
 
 /* Primary Nav */
+.primary-nav {
+	letter-spacing: 1px;
+}
 .primary-nav .breadcrumb {
+	padding: 15px;
     padding-left: 0;
     padding-right: 0;
     text-align: center;
@@ -441,7 +448,7 @@ footer {
     font-size: 1.2em;
 }
 .primary-nav a {
-    color: rgb(160,160,160);
+    color: #CCC;
 }
 .primary-nav .active a {
     color: #000;
