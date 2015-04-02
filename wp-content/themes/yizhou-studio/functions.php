@@ -3,7 +3,7 @@ add_action('init', function(){
     
     add_theme_support('post-thumbnails');
     
-    add_image_size('home-banner', 904, 362, true);
+    add_image_size('home-banner', 1169, 468, true);
     add_image_size('ad-home-banner', 111, 364, true);
     add_image_size('list-thumbnail', 360, 264, true);
     add_image_size('ad-content-side', 143, 468, true);
