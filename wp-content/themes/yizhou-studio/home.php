@@ -9,7 +9,7 @@
             <?php $banners = get_posts(array('tag'=>'home-banner'));?>
             <?php foreach($banners as $index => $banner){ ?>
             <div class="item<?php if($index === 0){ ?> active<?php } ?>">
-                <a href="<?=get_the_permalink($banner->ID)?>"><?=get_the_post_thumbnail($banner->ID, 'home-banner')?></a>
+                <a href="<?=get_the_permalink($banner->ID)?>"><?=get_the_post_thumbnail($banner->ID)?></a>
                 <!--<div class="carousel-caption"></div>--> 
             </div>
             <?php } ?>
