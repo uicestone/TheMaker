@@ -6,7 +6,7 @@
     <div class="">
         <div class="row">
             <div class="col-sm-4 col-md-3 founder">
-                <img src="http://placehold.it/315x420" alt="" width="315" height="420">
+                <img src="<?=get_stylesheet_directory_uri()?>/images/contributors/yizhou.jpg" alt="" width="315" height="420">
             </div>
             <div class="col-sm-8 col-md-9 team">
                 <div class="row category block-list international">
@@ -30,31 +30,31 @@
                 <h5>My team in China</h5>
                 <div class="row category block-list china">
                     <div class="col-xs-4 col-sm-3 category-item">
-                        <img src="<?=get_stylesheet_directory_uri()?>/images/contributors/team/Gaonan.jpg" width="135" height="135" alt="">
+                        <img src="<?=get_stylesheet_directory_uri()?>/images/contributors/Gaonan.jpg" width="135" height="135" alt="">
                         <h6 class="contributor-name">Gao Nan</h6>
                     </div>
                     <div class="col-xs-4 col-sm-3 category-item">
-                        <img src="<?=get_stylesheet_directory_uri()?>/images/contributors/team/Kelvin.jpg" width="135" height="135" alt="">
+                        <img src="<?=get_stylesheet_directory_uri()?>/images/contributors/Kelvin.jpg" width="135" height="135" alt="">
                         <h6 class="contributor-name">Kelvin Leung</h6>
                     </div>
                     <div class="col-xs-4 col-sm-3 category-item">
-                        <img src="<?=get_stylesheet_directory_uri()?>/images/contributors/team/Luna.jpg" width="135" height="135" alt="">
+                        <img src="<?=get_stylesheet_directory_uri()?>/images/contributors/Luna.jpg" width="135" height="135" alt="">
                         <h6 class="contributor-name">Luna Zhang</h6>
                     </div>
                     <div class="col-xs-4 col-sm-3 category-item">
-                        <img src="<?=get_stylesheet_directory_uri()?>/images/contributors/team/Deepak.jpg" width="135" height="135" alt="">
+                        <img src="<?=get_stylesheet_directory_uri()?>/images/contributors/Deepak.jpg" width="135" height="135" alt="">
                         <h6 class="contributor-name">Deepak Kumar</h6>
                     </div>
                     <div class="col-xs-4 col-sm-3 category-item">
-                        <img src="<?=get_stylesheet_directory_uri()?>/images/contributors/team/Sherman.jpg" width="135" height="135" alt="">
+                        <img src="<?=get_stylesheet_directory_uri()?>/images/contributors/Sherman.jpg" width="135" height="135" alt="">
                         <h6 class="contributor-name">Sherman Wu</h6>
                     </div>
                     <div class="col-xs-4 col-sm-3 category-item">
-                        <img src="<?=get_stylesheet_directory_uri()?>/images/contributors/team/Sasha.jpg" width="135" height="135" alt="">
+                        <img src="<?=get_stylesheet_directory_uri()?>/images/contributors/Sasha.jpg" width="135" height="135" alt="">
                         <h6 class="contributor-name">Sasha Yu</h6>
                     </div>
                     <div class="col-xs-4 col-sm-3 category-item">
-                        <img src="<?=get_stylesheet_directory_uri()?>/images/contributors/team/Roy.jpg" width="135" height="135" alt="">
+                        <img src="<?=get_stylesheet_directory_uri()?>/images/contributors/Roy.jpg" width="135" height="135" alt="">
                         <h6 class="contributor-name">Roy Zhao</h6>
                     </div>
                 </div>
