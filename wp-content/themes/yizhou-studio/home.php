@@ -1,7 +1,10 @@
 <?php get_header(); ?>
 <div class="home-hero">
     <div class="visible-lg advertisement advertisement-left">
-        <img src="<?=get_stylesheet_directory_uri()?>/images/advertisement/0.jpg" alt="adv" width="143" height="468">
+        <?php $ad_left = get_posts(array('tag'=>'home-ad-left', 'posts_per_page'=>1, 'orderby'=>'rand')); ?>
+        <?php if($ad_left){ ?>
+        <a href="<?=$ad_left[0]->post_content?>" target="_blank"><?=get_the_post_thumbnail($ad_left[0]->ID, 'ad-content-side')?></a>
+        <?php } ?>
     </div>
 
     <div id="home-hero" class="carousel slide" data-ride="carousel">
@@ -23,7 +26,10 @@
     </div>
 
     <div class="visible-lg advertisement advertisement-right">
-        <img src="<?=get_stylesheet_directory_uri()?>/images/advertisement/0.jpg" alt="adv" width="143" height="468">
+        <?php $ad_right = get_posts(array('tag'=>'home-ad-right', 'posts_per_page'=>1, 'orderby'=>'rand')); ?>
+        <?php if($ad_right){ ?>
+        <a href="<?=$ad_right[0]->post_content?>" target="_blank"><?=get_the_post_thumbnail($ad_right[0]->ID, 'ad-content-side')?></a>
+        <?php } ?>
     </div>
 
 </div>
