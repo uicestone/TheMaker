@@ -27,18 +27,22 @@
                         <h6 class="contributor-name">Salvo De Malebranche</h6>
                     </div>
                 </div>
-                <h5>My team in China</h5>
+                <h5>The Maker Board</h5>
                 <div class="row category block-list china">
                     <div class="col-xs-4 col-sm-3 category-item">
                         <img src="<?=get_stylesheet_directory_uri()?>/images/contributors/Gaonan.jpg" width="135" height="135" alt="">
                         <h6 class="contributor-name">Gao Nan</h6>
                     </div>
                     <div class="col-xs-4 col-sm-3 category-item">
-                        <img src="<?=get_stylesheet_directory_uri()?>/images/contributors/Kelvin.jpg" width="135" height="135" alt="">
+                        <img src="<?=get_stylesheet_directory_uri()?>/images/contributors/Amélie.jpg" width="135" height="135" alt="">
                         <h6 class="contributor-name">Kelvin Leung</h6>
                     </div>
                     <div class="col-xs-4 col-sm-3 category-item">
-                        <img src="<?=get_stylesheet_directory_uri()?>/images/contributors/Luna.jpg" width="135" height="135" alt="">
+                        <img src="<?=get_stylesheet_directory_uri()?>/images/contributors/Callan.jpg" width="135" height="135" alt="">
+                        <h6 class="contributor-name">Luna Zhang</h6>
+                    </div>
+                    <div class="col-xs-4 col-sm-3 category-item">
+                        <img src="<?=get_stylesheet_directory_uri()?>/images/contributors/Ray.jpg" width="135" height="135" alt="">
                         <h6 class="contributor-name">Luna Zhang</h6>
                     </div>
                     <div class="col-xs-4 col-sm-3 category-item">
