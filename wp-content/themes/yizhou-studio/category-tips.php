@@ -2,7 +2,10 @@
 
 <div class="paging-wrapper row">
     <div class="visible-lg col-lg-2 advertisement">
-        <a href="#"><img src="<?=get_stylesheet_directory_uri()?>/imagesadvertisement/1.jpg" width="142" height="310" alt="adv"></a>
+        <?php $ad_left = get_posts(array('tag'=>'tips-ad-left', 'posts_per_page'=>1, 'orderby'=>'rand')); ?>
+        <?php if($ad_left){ ?>
+        <a href="<?=$ad_left[0]->post_content?>" target="_blank"><?=get_the_post_thumbnail($ad_left[0]->ID, 'ad-content-side')?></a>
+        <?php } ?>
     </div>              
 
     <div class="col-lg-8 tips">
@@ -35,20 +38,11 @@
     </div>
 
     <div class="visible-lg col-lg-2 advertisement text-right">
-        <a href="#"><img src="<?=get_stylesheet_directory_uri()?>/images/advertisement/1.jpg" width="142" height="310" alt="adv"></a>
+        <?php $ad_right = get_posts(array('tag'=>'tips-ad-right', 'posts_per_page'=>1, 'orderby'=>'rand')); ?>
+        <?php if($ad_right){ ?>
+        <a href="<?=$ad_right[0]->post_content?>" target="_blank"><?=get_the_post_thumbnail($ad_right[0]->ID, 'ad-content-side')?></a>
+        <?php } ?>
     </div>
 
-    <div class="paging">
-        <a href="#" class="paging-prev" title="Prev Page">Prev</a>
-        <a href="#" class="paging-next" title="Next Page">Next</a>
-    </div>
-
-    <script id="listing-item-template" type="text/html">
-        <div class="row block-list thumbnail-list paging-block">
-            <div class="col-xs-3 thumbnail-list-item">
-                <a href="{{ url }}" title="{{ linkTitle }}"><img src="{{ img }}" alt="{{ altText }}"></a>
-            </div>
-        </div>
-    </script>
 </div>
 <?php get_footer(); ?>
