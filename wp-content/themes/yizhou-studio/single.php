@@ -11,8 +11,9 @@
 
 <br>
 
-<!--<div class="paging">
-    <a href="#" class="paging-prev" title="Prev Page">Prev</a>
-    <a href="#" class="paging-next" title="Next Page">Next</a>
-</div>-->
+<div class="paging">
+    <a href="#" class="paging-prev hide" title="Prev Page">Prev</a>
+    <a href="#" class="paging-next hide" title="Next Page">Next</a>
+</div>
+
 <?php get_footer(); ?>
