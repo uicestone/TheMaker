@@ -132,7 +132,7 @@
 		}
 	}
 	
-	$('.paging>.paging-next').on('click', function(event){
+	$('.content.paging>.paging-next').on('click', function(event){
 		event.preventDefault();
 		var thisPage = $('.article-wrapper>.paged.active');
 		var nextPage = thisPage.next('.paged');
@@ -141,7 +141,7 @@
 		resetPagingButtons();
 	});
 	
-	$('.paging>.paging-prev').on('click', function(event){
+	$('.content.paging>.paging-prev').on('click', function(event){
 		event.preventDefault();
 		var thisPage = $('.article-wrapper>.paged.active');
 		var nextPage = thisPage.prev('.paged');

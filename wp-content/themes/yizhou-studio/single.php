@@ -11,7 +11,7 @@
 
 <br>
 
-<div class="paging">
+<div class="paging content">
     <a href="#" class="paging-prev hide" title="Prev Page">Prev</a>
     <a href="#" class="paging-next hide" title="Next Page">Next</a>
 </div>
