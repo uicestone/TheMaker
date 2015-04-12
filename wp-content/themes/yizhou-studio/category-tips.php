@@ -10,30 +10,13 @@
 
     <div class="col-lg-8 tips">
         <div class="row block-list paging-block">
+            <?php query_posts(array('posts_per_page'=>-1, 'category_name'=>'tips')); ?>
+            <?php while(have_posts()): the_post(); ?>
             <div class="col-xs-6 col-sm-3">
-                <a href="http://www.channel.com" title=""><img src="<?=get_stylesheet_directory_uri()?>/images/tips/6765.jpg" alt="" width="136" height="136"></a>
+                <a href="<?php the_content(); ?>" title="<?php the_title(); ?>"><?php the_post_thumbnail('tips'); ?></a>
             </div>
-            <div class="col-xs-6 col-sm-3">
-                <a href="http://www.nike.com" title=""><img src="<?=get_stylesheet_directory_uri()?>/images/tips/2.jpg" alt="" width="136" height="136"></a>
-            </div>
-            <div class="col-xs-6 col-sm-3">
-                <a href="http://www.channel.com" title=""><img src="<?=get_stylesheet_directory_uri()?>/images/tips/345.jpg" alt="" width="136" height="136"></a>
-            </div>
-            <div class="col-xs-6 col-sm-3">
-                <a href="http://www.nike.com" title=""><img src="<?=get_stylesheet_directory_uri()?>/images/tips/nike.jpg" alt="" width="136" height="136"></a>
-            </div>
-            <div class="col-xs-6 col-sm-3">
-                <a href="http://www.chopard.com" title=""><img src="<?=get_stylesheet_directory_uri()?>/images/tips/78.jpg" alt="" width="136" height="136"></a>
-            </div>
-             <div class="col-xs-6 col-sm-3">
-                <a href="http://www.channel.com" title=""><img src="<?=get_stylesheet_directory_uri()?>/images/tips/90.jpg" alt="" width="136" height="136"></a>
-            </div>
-             <div class="col-xs-6 col-sm-3">
-                <a href="http://www.chopard.com" title=""><img src="<?=get_stylesheet_directory_uri()?>/images/tips/89.jpg" alt="" width="136" height="136"></a>
-            </div>
-             <div class="col-xs-6 col-sm-3">
-                <a href="http://www.channel.com" title=""><img src="<?=get_stylesheet_directory_uri()?>/images/tips/5645.jpg" alt="" width="136" height="136"></a>
-            </div>
+            <?php endwhile; ?>
+            <?php wp_reset_query(); ?>
         </div>
     </div>
 
