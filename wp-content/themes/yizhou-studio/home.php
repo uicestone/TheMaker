@@ -36,83 +36,35 @@
 
 <hr class="hidden-xs">
 
+<?php
+$categories = array(
+    'lifestyle'=>'Lifestyle / 生活方式',
+    'fashion'=>'Fashion / 时尚',
+    'entertainment'=>'Entertainment / 娱乐',
+    'design-architecture'=>'Design-Architecture / 设计－建筑',
+    'art'=>'Art / 艺术',
+    'people'=>'People / 人物',
+    'tips'=>'Tips / 臆想',
+);
+?>
+
 <div class="row block-list category">
+    <?php $i = 0; foreach($categories as $name => $label){ $i++; ?>
     <div class="col-xs-4 col-sm-3 category-item">
-        <a href="<?=site_url()?>/category/lifestyle/">
+        <a href="<?=site_url()?>/category/<?=$name?>/">
             <div class="thumbnail">
-                <img src="<?=get_stylesheet_directory_uri()?>/images/category/nav-01.jpg" alt="">
+                <?php $latest_post = get_posts(array('category_name'=>$name))[0]; ?>
+                <?php if(has_post_thumbnail($latest_post->ID)){ ?>
+                <?=get_the_post_thumbnail($latest_post->ID, 'thumbnail')?>
+                <?php }else{ ?>
+                <img src="<?=get_stylesheet_directory_uri()?>/images/category/nav-<?=substr($i + 100, -2)?>.jpg">
+                <?php } ?>
             </div>
             <h2 class="caption">
-                <span class="caption-text">Lifestyle / 生活方式</span>
+                <span class="caption-text"><?=$label?></span>
             </h2>
         </a>
     </div>
-
-    <div class="col-xs-4 col-sm-3 category-item">
-        <a href="<?=site_url()?>/category/fashion/">
-            <div class="thumbnail">
-                <img src="<?=get_stylesheet_directory_uri()?>/images/category/nav-02.jpg" alt="">
-            </div>
-            <h2 class="caption">
-                <span class="caption-text">Fashion / 时尚</span>
-            </h2>
-        </a>
-    </div>
-
-    <div class="col-xs-4 col-sm-3 category-item">
-        <a href="<?=site_url()?>/category/entertainment/">
-            <div class="thumbnail">
-                <img src="<?=get_stylesheet_directory_uri()?>/images/category/nav-03.jpg" alt="">
-            </div>
-            <h2 class="caption">
-                <span class="caption-text">Entertainment / 娱乐</span>
-            </h2>
-        </a>
-    </div>
-
-    <div class="col-xs-4 col-sm-3 category-item">
-        <a href="<?=site_url()?>/category/design-architecture/">
-            <div class="thumbnail">
-                <img src="<?=get_stylesheet_directory_uri()?>/images/category/nav-04.jpg" alt="">
-            </div>
-            <h2 class="caption">
-                <span class="caption-text">Design-Architecture / 设计－建筑</span>
-            </h2>
-        </a>
-    </div>
-
-    <div class="col-xs-4 col-sm-3 category-item">
-        <a href="<?=site_url()?>/category/art/">
-            <div class="thumbnail">
-                <img src="<?=get_stylesheet_directory_uri()?>/images/category/nav-05.jpg" alt="">
-            </div>
-            <h2 class="caption">
-                <span class="caption-text">Art / 艺术</span>
-            </h2>
-        </a>
-    </div>
-
-    <div class="col-xs-4 col-sm-3 category-item">
-        <a href="<?=site_url()?>/category/people/">
-            <div class="thumbnail">
-                <img src="<?=get_stylesheet_directory_uri()?>/images/category/nav-06.jpg" alt="">
-            </div>
-            <h2 class="caption">
-                <span class="caption-text">People / 人物</span>
-            </h2>
-        </a>
-    </div>
-
-    <div class="col-xs-4 col-sm-3 category-item">
-        <a href="<?=site_url()?>/category/tips/">
-            <div class="thumbnail">
-                <img src="<?=get_stylesheet_directory_uri()?>/images/category/nav-07.jpg" alt="">
-            </div>
-            <h2 class="caption">
-                <span class="caption-text">Tips / 臆想</span>
-            </h2>
-        </a>
-    </div>
-
+    <?php } ?>
 </div>
 <?php get_footer(); ?>
