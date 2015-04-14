@@ -24,14 +24,11 @@
         <!-- endbuild -->
         <?php wp_head(); ?>
     </head>
-        <?php if(strpos($_SERVER['HTTP_HOST'], 'themakermagazine.com')){ ?>
-        <body style="background: url('<?=site_url()?>/wp-content/uploads/2015/04/coming-soon.png'); background-size: cover"></body>
-        </html>
-        <?php exit; } ?>
     <!--[if IE 7 ]>    <body class="ie7"> <![endif]-->
     <!--[if IE 8 ]>    <body class="ie8"> <![endif]-->
     <!--[if IE 9 ]>    <body class="ie9"> <![endif]-->
     <!--[if (gt IE 9)|!(IE)]><!--> <body> <!--<![endif]-->
+
         <div class="container home">
             <header>
                 <div class="logo">
