@@ -788,6 +788,10 @@ article img.float-right {
     font-size: 1.4em;
 }
 
+.contributors .founder {
+	padding-top: 100px;
+}
+
 .contributors .founder img {
     width: 100%;
     height: auto !important;
@@ -803,11 +807,14 @@ article img.float-right {
 }
 @media only screen and (min-width: 1200px) {
     .contributors .international .category-item {
-        width: 24%;
+        width: 19.7%;
         margin-bottom: 0;
     }
+	.contributors .international .category-item img {
+		width: 80%;
+	}
     .contributors .china .category-item {
-        width: 12%;
+        width: 9.7%;
     }
 }
 
