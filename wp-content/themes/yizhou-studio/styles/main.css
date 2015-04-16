@@ -297,6 +297,13 @@ footer {
 .advertisement a+a {
     margin-top: 10px;
 }
+
+@media only screen and (min-width: 1600px) {
+	.advertisement a+a {
+		margin-top: 63px;
+	}
+}
+
 .advertisement img{
     max-width: 100%;
     height: auto;

@@ -13,7 +13,7 @@
         <!-- endbower -->
         <!-- endbuild -->
         <!-- build:css(.tmp) styles/main.css -->
-        <link rel="stylesheet" href="<?=get_stylesheet_directory_uri()?>/styles/main.css?ver=1.3">
+        <link rel="stylesheet" href="<?=get_stylesheet_directory_uri()?>/styles/main.css?ver=1.4">
         <link rel="stylesheet" href="<?=get_stylesheet_directory_uri()?>/style.css">
         <!-- endbuild -->
         <!-- build:js(.) scripts/oldieshim.js -->
