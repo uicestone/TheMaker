@@ -7,7 +7,7 @@ add_action('init', function(){
     add_image_size('ad-home-banner', 111, 364, true);
     add_image_size('list-thumbnail', 360, 264, true);
     add_image_size('ad-content-side', 143, 468, true);
-    add_image_size('tips', 136, 136, true);
+    add_image_size('tips', 200, 200, true);
     
     register_nav_menu('main-nav', 'Main Navigation');
     

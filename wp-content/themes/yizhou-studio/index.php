@@ -5,7 +5,7 @@
         <div class="col-xs-6 thumbnail-list-item">
             <a href="<?php the_permalink(); ?>" title="SECRET ICELAND">
                 <div class="thumbnail">
-                <?php the_post_thumbnail('list-thumbnail'); ?>
+                <?php the_post_thumbnail('large-thumbnail'); ?>
                     <h2 class="caption hidden-xs">
                         <small><?=get_post_meta(get_the_ID(), 'subtitle', true)?></small>
                         <span><?php the_title(); ?></span>
