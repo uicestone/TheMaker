@@ -39,7 +39,7 @@
 <?php
 $categories = array(
     'lifestyle'=>'Lifestyle / 生活方式',
-    'fashion'=>'Fashion / 时尚',
+    'fashion'=>'Style / 风格',
     'entertainment'=>'Entertainment / 娱乐',
     'design-architecture'=>'Design-Architecture / 设计－建筑',
     'art'=>'Art / 艺术',
