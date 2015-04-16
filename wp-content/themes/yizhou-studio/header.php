@@ -56,11 +56,11 @@
                     <ul>
                         <li><a href="http://weibo.com/5358167895/profile?rightmod=1&wvr =6&mod=personinfo" target="_blank"><img src="<?=get_stylesheet_directory_uri()?>/images/social-icons/weibo.svg" width="20" height="20" alt=""></a></li>
                         <li><a href="<?=get_posts(array('name'=>'wechat'))[0]->post_content?>" target="_blank"><img src="<?=get_stylesheet_directory_uri()?>/images/social-icons/wechat.svg" width="20" height="20" alt=""></a></li>
-                        <li><a href="#" target="_blank"><img src="<?=get_stylesheet_directory_uri()?>/images/social-icons/twitter.svg" width="20" height="20" alt=""></a></li>
-                        <li><a href="http://instagram.com/themakermag" target="_blank"><img src="<?=get_stylesheet_directory_uri()?>/images/social-icons/instgram.svg" width="20" height="20" alt=""></a></li>
-                        <li><a href="https://www.facebook.com/pages/The-Maker-%E8%8 7%86%E6%83%B3/949691381726854?ref=hl" target="_blank"><img src="<?=get_stylesheet_directory_uri()?>/images/social-icons/facebook.svg" width="20" height="20" alt=""></a></li>
-                        <li><a href="http://www.tudou.com/ home/_476437525" target="_blank"><img src="<?=get_stylesheet_directory_uri()?>/images/social-icons/tudou.svg" width="20" height="20" alt=""></a></li>
-                        <li><a href="#" target="_blank"><img src="<?=get_stylesheet_directory_uri()?>/images/social-icons/youtube.svg" width="20" height="20" alt=""></a></li>
+                        <li><a href="https://twitter.com/themakermag" target="_blank"><img src="<?=get_stylesheet_directory_uri()?>/images/social-icons/twitter.svg" width="20" height="20" alt=""></a></li>
+                        <li><a href="https://instagram.com/themakermag/" target="_blank"><img src="<?=get_stylesheet_directory_uri()?>/images/social-icons/instgram.svg" width="20" height="20" alt=""></a></li>
+                        <li><a href="https://www.facebook.com/pages/The-Maker-%E8%87%86%E6%83%B3/949691381726854?ref=hl" target="_blank"><img src="<?=get_stylesheet_directory_uri()?>/images/social-icons/facebook.svg" width="20" height="20" alt=""></a></li>
+                        <li><a href="http://v.tudou.com/YiZhouStudio/item" target="_blank"><img src="<?=get_stylesheet_directory_uri()?>/images/social-icons/tudou.svg" width="20" height="20" alt=""></a></li>
+                        <li><a href="https://www.youtube.com/channel/UCCT3p1XgtbvyYneDqEm33dw" target="_blank"><img src="<?=get_stylesheet_directory_uri()?>/images/social-icons/youtube.svg" width="20" height="20" alt=""></a></li>
                     </ul>
                 </div>
             </header>
