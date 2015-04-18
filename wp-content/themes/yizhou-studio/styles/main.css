@@ -715,7 +715,7 @@ article img.float-right {
 /* Media */
 .media {
     margin-bottom: 1em;
-    border: 1px solid #000;
+    border: 0px solid #000;
 }
 .media embed, .meida object, .media video {
     width: 100%;
