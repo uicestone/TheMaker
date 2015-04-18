@@ -13,7 +13,7 @@
             <?php query_posts(array('posts_per_page'=>-1, 'category_name'=>'tips')); ?>
             <?php while(have_posts()): the_post(); ?>
             <div class="col-xs-6 col-sm-3">
-                <a href="<?php the_content(); ?>" title="<?php the_title(); ?>"><?php the_post_thumbnail('tips'); ?></a>
+                <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_post_thumbnail('tips'); ?></a>
             </div>
             <?php endwhile; ?>
             <?php wp_reset_query(); ?>
