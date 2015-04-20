@@ -21,7 +21,7 @@
         <?php endwhile; ?>
         <script id="listing-item-template" type="text/html">
             <div class="col-xs-6 thumbnail-list-item">
-                <a href="{{url}}" title="{{ altText }}">
+                <a href="{{url}}" title="">
                     <div class="thumbnail">
                         {{ thumbnail }}
                         <h2 class="caption hidden-xs">{{ title }}</h2>
