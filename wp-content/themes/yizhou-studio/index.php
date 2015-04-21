@@ -3,7 +3,7 @@
     <div class="row block-list thumbnail-list paging-block" data-paging-src="<?=site_url()?>/category/<?=get_the_category()[0]->slug?>" data-paging-total="<?=floor($wp_query->found_posts / $wp_query->query_vars['posts_per_page'])?>">
         <?php while(have_posts()): the_post(); ?>
         <div class="col-xs-6 thumbnail-list-item">
-            <a href="<?php the_permalink(); ?>" title="SECRET ICELAND">
+            <a href="<?php the_permalink(); ?>" title="">
                 <div class="thumbnail">
                 <?php the_post_thumbnail('large-thumbnail'); ?>
                     <h2 class="caption hidden-xs">
@@ -21,7 +21,7 @@
         <?php endwhile; ?>
         <script id="listing-item-template" type="text/html">
             <div class="col-xs-6 thumbnail-list-item">
-                <a href="{{url}}" title="">
+                <a href="{{url}}" title="{{ altText }}">
                     <div class="thumbnail">
                         {{ thumbnail }}
                         <h2 class="caption hidden-xs">{{ title }}</h2>
