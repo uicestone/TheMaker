@@ -34,8 +34,6 @@
 
 </div>
 
-<hr class="hidden-xs">
-
 <?php
 $categories = array(
     'lifestyle'=>'Lifestyle / 生活方式',
