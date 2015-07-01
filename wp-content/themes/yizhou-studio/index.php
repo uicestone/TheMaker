@@ -5,7 +5,7 @@
         <div class="col-md-6 thumbnail-list-item">
             <a href="<?php the_permalink(); ?>" title="">
                 <div class="thumbnail">
-                <?php the_post_thumbnail('large-thumbnail'); ?>
+                    <?php the_post_thumbnail('large-thumbnail'); ?>
                     <h2 class="caption hidden-xs">
                         <small><?=get_post_meta(get_the_ID(), 'subtitle', true)?></small>
                         <span><?php the_title(); ?></span>
@@ -49,7 +49,7 @@
             'id'=>get_the_ID(),
             'url'=>get_the_permalink(),
             'title'=>'<small>' . get_post_meta(get_the_ID(), 'subtitle', true) . '</small><span>' . get_the_title() . '</span>',
-            'thumbnail'=>get_the_post_thumbnail(get_the_ID(), 'list-thumbnail'),
+            'thumbnail'=>get_the_post_thumbnail(get_the_ID(), 'large-thumbnail'),
             'summary'=>get_the_excerpt(),
             'altText'=>get_the_title()
         );
